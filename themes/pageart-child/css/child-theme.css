@@ -20254,6 +20254,10 @@ header#wrapper-navbar .navbar-toggler span {
 #wrapper-footer p > a {
   margin-left: 10px;
 }
+body {
+  background-color: aqua !important;
+}
+
 .entry-image {
   padding: 16px 0;
 }
