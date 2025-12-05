@@ -1,0 +1,328 @@
+/* PA Modified Product Gallery Styles - Version 1.0.1 */
+/* Fixed: CSS versioning and gray area issue with object-fit: contain */
+
+.pa-gallery-modified {
+  display: flex;
+  gap: 20px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.pa-gallery-wrap-modified {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Thumbnail Gallery Styles */
+.pa-gallery-thumbs-modified {
+  flex: 0 0 120px;
+  max-height: 500px;
+}
+
+@media screen and (min-width: 768px) {
+  .pa-gallery-thumbs-modified {
+    margin-top: 10px;
+  }
+}
+
+.pa-thumbs-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.pa-thumbs-slider {
+  flex: 1;
+  overflow: hidden;
+  max-height: calc(100% - 23px);
+  display: flex;
+
+}
+
+@media screen and (min-width: 768px) {
+  .pa-thumbs-slider {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.pa-thumb-slide-modified {
+  margin-bottom: 7px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 87px !important;
+  width: 87px !important;
+  min-height: 87px !important;
+  min-width: 87px !important;
+  border-radius: 20px !important;
+}
+
+.pa-thumb-slide-modified:hover {
+  transform: scale(1.05);
+}
+
+.pa-thumb-slide-modified.active {
+  outline: 1px solid #558832;
+}
+
+.pa-thumb-img-modified {
+  display: block;
+  object-fit: contain;
+  border-radius: 20px !important;
+  height: 87px !important;
+  width: 87px !important;
+  min-height: 87px !important;
+  min-width: 87px !important;
+}
+
+/* Thumbnail Navigation Arrows */
+.pa-thumb-prev,
+.pa-thumb-next {
+  background: #e5efdb;
+  border: 1px solid #1c3c38;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  color: #1c3c38;
+  z-index: 5;
+}
+
+.pa-thumb-prev i,
+.pa-thumb-next i {
+  color: #1c3c38;
+}
+
+.pa-thumb-prev:hover,
+.pa-thumb-next:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+  color: #495057;
+}
+
+.pa-thumb-prev:disabled,
+.pa-thumb-next:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Main Gallery Styles */
+.pa-gallery-main-modified {
+  flex: 1;
+  position: relative;
+}
+
+.pa-main-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.pa-main-slide-modified {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  cursor: grab;
+}
+
+.pa-main-slide-modified.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.pa-main-slide-modified:active {
+  cursor: grabbing;
+}
+
+.pa-main-slide-modified, .pa-main-slide-modified img {
+  border-radius: 20px;
+}
+
+.pa-main-img-modified {
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  background: #fff;
+  width: 100%;
+  height: auto;
+  max-height: 478px;
+  object-fit: cover;
+  min-height: 434px;
+  min-width: 434px;
+  max-width: 478x;
+  border-radius: 20px;
+
+}
+
+@media (max-width: 640px) {
+  .pa-main-img-modified {
+    max-width: 290px;
+    min-width: 290px;
+    min-height: 290px;
+    max-height: 290px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .pa-main-img-modified {
+    max-width: 478px;
+    max-height: 478px;
+    min-width: 478px;
+    min-height: 478px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pa-gallery-wrap-modified {
+    flex-direction: column; /* Main image first, thumbs below */
+    gap: 15px;
+  }
+
+  .pa-gallery-thumbs-modified {
+    flex: none;
+    max-height: none;
+    order: 2; /* Ensure thumbs are at bottom */
+  }
+
+  .pa-gallery-main-modified {
+    order: 1; /* Ensure main image is at top */
+  }
+
+  .pa-thumbs-container {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .pa-thumbs-slider {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-height: none;
+    gap: 10px;
+    padding: 0 10px;
+    padding-top: 15px;
+  }
+
+  .pa-thumb-slide-modified {
+    flex: 0 0 80px;
+    margin-bottom: 0;
+  }
+
+  .pa-thumb-img-modified {
+    height: 80px;
+  }
+
+
+  .pa-thumb-prev i,
+  .pa-thumb-next i {
+    transform: rotate(270deg); /* Rotate 180 degrees from original 90deg */
+  }
+
+  .pa-main-container {
+    height: 300px;
+  }
+}
+
+/* Touch/Drag Support */
+.pa-main-slide-modified {
+  touch-action: pan-x pan-y;
+}
+
+/* Smooth scrolling for thumbnails */
+.pa-thumbs-slider {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for webkit browsers */
+.pa-thumbs-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.pa-thumbs-slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Loading state */
+.pa-gallery-modified.loading .pa-main-img-modified,
+.pa-gallery-modified.loading .pa-thumb-img-modified {
+  opacity: 0.7;
+}
+
+/* Zoom effect on hover for main image */
+.pa-main-slide-modified:hover .pa-main-img-modified {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+.pa-thumb-slide-modified:focus {
+  outline-offset: 2px;
+}
+
+.pa-thumb-prev:focus,
+.pa-thumb-next:focus {
+  outline-offset: 2px;
+}
+
+.pa-thumb-prev,
+.pa-thumb-next {
+  flex: 0 0 30px;
+  margin: 0 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .pa-thumb-prev,
+  .pa-thumb-next {
+    position: relative;
+    top: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pa-thumb-prev,
+  .pa-thumb-next {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .pa-thumb-prev {
+    top: -15px;
+  }
+  .pa-thumb-next {
+    bottom: 15px;
+  }
+}
+
+.pa-gallery-thumbs-modified .pa-thumb-prev,
+.pa-gallery-thumbs-modified .pa-thumb-next {
+  margin: 0px;
+}
+
+.pa-gallery-thumbs-modified .fa-chevron-up::before,
+.pa-gallery-thumbs-modified .fa-chevron-down::before {
+  font-size: 12px;
+}

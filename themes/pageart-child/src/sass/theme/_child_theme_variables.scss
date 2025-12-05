@@ -1,0 +1,412 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+$grid-breakpoints: (
+        xs: 0,
+        xxs: 375px,
+        xs2: 412px,
+        sm: 720px,
+        md: 960px,
+        lg: 1140px,
+        xl: 1320px,
+        xxl: 1920px
+);
+
+$container-max-widths: (
+        xxs: 375px,
+        xs2: 412px,
+        sm: 720px,
+        md: 960px,
+        lg: 1140px,
+        xl: 1320px,
+        xxl: 1920px
+);
+
+
+// Kolory brandowe i statusowe
+
+$primary: #7749E8; // Primary
+$primary-dark: #5227CC;
+$primary-light: #E8E5FC;
+
+$secondary: #70777F;
+$secondary-dark: #454950;
+$secondary-light: #A8B5BE;
+
+$success: #29A745;
+$danger: #DC3545;
+$warning: #FFC107;
+$info: #17A2B8;
+
+// Skala szarości z designu
+
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+$white: #fff;
+$black: #000;
+
+// --- BLUE ---
+$blue-100: #cfe2ff;
+$blue-200: #9ec5fe;
+$blue-300: #6ea8fe;
+$blue-400: #3d8bfd;
+$blue-500: #0d6efd;
+$blue-600: #0a58ca;
+$blue-700: #084298;
+$blue-800: #052c65;
+$blue-900: #031633;
+
+$blue: $blue-500;
+
+$blues: (
+        "blue-100": $blue-100,
+        "blue-200": $blue-200,
+        "blue-300": $blue-300,
+        "blue-400": $blue-400,
+        "blue-500": $blue-500,
+        "blue-600": $blue-600,
+        "blue-700": $blue-700,
+        "blue-800": $blue-800,
+        "blue-900": $blue-900
+);
+
+// --- INDIGO ---
+$indigo-100: #e0cffc;
+$indigo-200: #c29ffa;
+$indigo-300: #a370f7;
+$indigo-400: #8540f5;
+$indigo-500: #6610f2;
+$indigo-600: #520dc2;
+$indigo-700: #3d0a91;
+$indigo-800: #290661;
+$indigo-900: #140330;
+
+$indigo: $indigo-500;
+
+$indigos: (
+        "indigo-100": $indigo-100,
+        "indigo-200": $indigo-200,
+        "indigo-300": $indigo-300,
+        "indigo-400": $indigo-400,
+        "indigo-500": $indigo-500,
+        "indigo-600": $indigo-600,
+        "indigo-700": $indigo-700,
+        "indigo-800": $indigo-800,
+        "indigo-900": $indigo-900
+);
+
+// --- PURPLE ---
+$purple-100: #e2d9f3;
+$purple-200: #c5b3e6;
+$purple-300: #a98eda;
+$purple-400: #8c68cd;
+$purple-500: #6f42c1;
+$purple-600: #59359a;
+$purple-700: #432874;
+$purple-800: #2c1a4d;
+$purple-900: #160d27;
+
+$purple: $purple-500;
+
+$purples: (
+        "purple-100": $purple-100,
+        "purple-200": $purple-200,
+        "purple-300": $purple-300,
+        "purple-400": $purple-400,
+        "purple-500": $purple-500,
+        "purple-600": $purple-600,
+        "purple-700": $purple-700,
+        "purple-800": $purple-800,
+        "purple-900": $purple-900
+);
+
+// --- PINK ---
+$pink-100: #f7d6e6;
+$pink-200: #efadce;
+$pink-300: #e685b5;
+$pink-400: #de5c9d;
+$pink-500: #d63384;
+$pink-600: #ab296a;
+$pink-700: #801f4f;
+$pink-800: #561435;
+$pink-900: #2b0a1a;
+
+$pink: $pink-500;
+
+$pinks: (
+        "pink-100": $pink-100,
+        "pink-200": $pink-200,
+        "pink-300": $pink-300,
+        "pink-400": $pink-400,
+        "pink-500": $pink-500,
+        "pink-600": $pink-600,
+        "pink-700": $pink-700,
+        "pink-800": $pink-800,
+        "pink-900": $pink-900
+);
+
+// --- RED ---
+$red-100: #f8d7da;
+$red-200: #f1aeb5;
+$red-300: #ea868f;
+$red-400: #e35d6a;
+$red-500: #dc3545;
+$red-600: #b02a37;
+$red-700: #842029;
+$red-800: #58151c;
+$red-900: #2c0b0e;
+
+$red: $red-500;
+
+$reds: (
+        "red-100": $red-100,
+        "red-200": $red-200,
+        "red-300": $red-300,
+        "red-400": $red-400,
+        "red-500": $red-500,
+        "red-600": $red-600,
+        "red-700": $red-700,
+        "red-800": $red-800,
+        "red-900": $red-900
+);
+
+// --- ORANGE ---
+$orange-100: #ffe5d0;
+$orange-200: #fecba1;
+$orange-300: #feb272;
+$orange-400: #fd9843;
+$orange-500: #fd7e14;
+$orange-600: #ca6510;
+$orange-700: #984c0c;
+$orange-800: #653208;
+$orange-900: #331904;
+
+$orange: $orange-500;
+
+$oranges: (
+        "orange-100": $orange-100,
+        "orange-200": $orange-200,
+        "orange-300": $orange-300,
+        "orange-400": $orange-400,
+        "orange-500": $orange-500,
+        "orange-600": $orange-600,
+        "orange-700": $orange-700,
+        "orange-800": $orange-800,
+        "orange-900": $orange-900
+);
+
+
+// --- YELLOW ---
+$yellow-100: #fff3cd;
+$yellow-200: #ffe69c;
+$yellow-300: #ffda6a;
+$yellow-400: #ffcd39;
+$yellow-500: #ffc107;
+$yellow-600: #cc9a06;
+$yellow-700: #997404;
+$yellow-800: #664d03;
+$yellow-900: #664d03;
+
+$yellow: $yellow-500;
+
+$yellows: (
+        "yellow-100": $yellow-100,
+        "yellow-200": $yellow-200,
+        "yellow-300": $yellow-300,
+        "yellow-400": $yellow-400,
+        "yellow-500": $yellow-500,
+        "yellow-600": $yellow-600,
+        "yellow-700": $yellow-700,
+        "yellow-800": $yellow-800,
+        "yellow-900": $yellow-900
+);
+
+// --- GREEN ---
+$green-100: #d1e7dd;
+$green-200: #a3cfbb;
+$green-300: #75b798;
+$green-400: #479f76;
+$green-500: #198754;
+$green-600: #146c43;
+$green-700: #0f5132;
+$green-800: #0a3622;
+$green-900: #051b11;
+
+$green: $green-500;
+
+$greens: (
+        "green-100": $green-100,
+        "green-200": $green-200,
+        "green-300": $green-300,
+        "green-400": $green-400,
+        "green-500": $green-500,
+        "green-600": $green-600,
+        "green-700": $green-700,
+        "green-800": $green-800,
+        "green-900": $green-900
+);
+
+// --- TEAL ---
+$teal-100: #d2f4ea;
+$teal-200: #a6e9d5;
+$teal-300: #79d9c1;
+$teal-400: #4dd4ac;
+$teal-500: #20c997;
+$teal-600: #1aa179;
+$teal-700: #13795b;
+$teal-800: #0d503c;
+$teal-900: #06281e;
+
+$teal: $teal-500;
+
+$teals: (
+        "teal-100": $teal-100,
+        "teal-200": $teal-200,
+        "teal-300": $teal-300,
+        "teal-400": $teal-400,
+        "teal-500": $teal-500,
+        "teal-600": $teal-600,
+        "teal-700": $teal-700,
+        "teal-800": $teal-800,
+        "teal-900": $teal-900
+);
+
+// --- CYAN ---
+$cyan-100: #cff4fc;
+$cyan-200: #9eeaf9;
+$cyan-300: #6edff6;
+$cyan-400: #3dd5f3;
+$cyan-500: #0dcaf0;
+$cyan-600: #0aa2c0;
+$cyan-700: #087990;
+$cyan-800: #055160;
+$cyan-900: #032830;
+
+$cyan: $cyan-500;
+
+$cyans: (
+        "cyan-100": $cyan-100,
+        "cyan-200": $cyan-200,
+        "cyan-300": $cyan-300,
+        "cyan-400": $cyan-400,
+        "cyan-500": $cyan-500,
+        "cyan-600": $cyan-600,
+        "cyan-700": $cyan-700,
+        "cyan-800": $cyan-800,
+        "cyan-900": $cyan-900
+);
+
+
+// Mapy Bootstrapa
+
+$colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "danger": $danger,
+        "warning": $warning,
+        "info": $info,
+  // base palettes
+        "blue": $blue,
+        "indigo": $indigo,
+        "purple": $purple,
+        "pink": $pink,
+        "red": $red,
+        "orange": $orange,
+        "yellow": $yellow,
+        "green": $green,
+        "teal": $teal,
+        "cyan": $cyan,
+  // neutrals
+        "black": $black,
+        "white": $white,
+        "gray": $gray-600,
+        "gray-dark": $gray-800
+);
+
+$theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $gray-100,
+        "dark": $gray-900
+);
+
+
+// Colors
+$headings-color: #343A40 !default;
+
+// Typography scale – Headings
+$headings-font-family: 'Inter', sans-serif !default;
+$headings-font-weight: 600 !default;
+$headings-line-height: 1.2 !default;
+
+// Sizes
+$h1-font-size: 40px !default;
+$h2-font-size: 32px !default;
+$h3-font-size: 28px !default;
+$h4-font-size: 24px !default;
+$h5-font-size: 20px !default;
+$h6-font-size: 16px !default;
+
+// Display headings (extra-large)
+$display1-size: 72px !default;
+$display2-size: 64px !default;
+$display3-size: 58px !default;
+$display4-size: 52px !default;
+$display-font-weight: 700 !default;
+$display-line-height: 1.1 !default;
+
+
+// Base text
+$font-family-base: 'Inter', sans-serif !default;
+$font-size-base: 1rem !default;
+$font-weight-base: 400 !default;
+$line-height-base: 1.75 !default;
+$letter-spacing-base: 0 !default;
+$body-color: #68717A !default;
+
+// Lead text
+$lead-font-family: 'Inter', sans-serif !default;
+$lead-font-weight: 400 !default;
+$lead-font-size: 21px !default;
+$lead-line-height: 36px !default;
+$lead-letter-spacing: 0 !default;
+$lead-color: $gray-600 !default;
+
+
+$spacers: (
+        0: 0,
+        1: 0.25rem, // 4px
+        2: 0.5rem, // 8px
+        3: 0.75rem, // 12px
+        4: 1rem, // 16px
+        5: 1.25rem, // 20px
+        6: 1.5rem, // 24px
+        7: 1.75rem, // 28px
+        8: 2rem, // 32px
+        9: 3rem, // 48px
+        10: 4rem, // 64px
+        11: 6rem, // 96px
+        12: 10rem // 160px
+) !default;
+
+
+$enable-shadows: true;
+
+$box-shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.10);
+$box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+$box-shadow-lg: 0 8px 35px rgba(0, 0, 0, 0.16);
+$box-shadow-inset: inset 0 1px 2px rgba($black, .075);

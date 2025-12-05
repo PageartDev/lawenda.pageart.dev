@@ -1,0 +1,15 @@
+#wrapper-footer {
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: #9F9FA5;
+
+    & > a {
+      margin-left: 10px;
+
+      & > img {
+
+      }
+    }
+  }
+}

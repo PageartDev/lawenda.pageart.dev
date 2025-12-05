@@ -1,0 +1,19 @@
+/*
+.single-product {
+  main#main {
+    & > .product {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 64px;
+
+      .pa-gallery-modified {
+        width: 100%;
+        flex: 1 1 100%;
+
+        @include media-breakpoint-up(md) {
+          flex: 1 1;
+        }
+      }
+    }
+  }
+}*/

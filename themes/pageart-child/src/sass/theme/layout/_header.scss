@@ -1,0 +1,30 @@
+header#wrapper-navbar {
+  height: 60px;
+
+  .navbar-toggler {
+    border: 0;
+    padding: 0;
+    box-shadow: none !important;
+
+    span {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .header-searchbar {
+    .dropdown {
+      .dropdown-menu {
+        @include media-breakpoint-down(sm) {
+          transform: translateX(20%);
+        }
+      }
+    }
+  }
+
+  .header-cart {
+    .dropdown-menu {
+
+    }
+  }
+}

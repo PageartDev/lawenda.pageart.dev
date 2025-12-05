@@ -1,0 +1,38 @@
+.wc-block-components-main {
+  .wc-block-checkout__actions {
+    .wc-block-checkout__actions_row {
+      button {
+        @extend .btn;
+        @extend .btn-primary;
+        text-align: center;
+        min-height: unset;
+
+        .wc-block-components-checkout-place-order-button__text {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.wc-block-components-sidebar {
+  .wp-block-woocommerce-checkout-order-summary-block {
+    .wc-block-components-checkout-order-summary__content {
+      .wp-block-woocommerce-checkout-order-summary-coupon-form-block {
+        .wc-block-components-totals-coupon__form {
+          .wc-block-components-text-input {
+            input {
+
+            }
+          }
+
+          button {
+            @extend .btn;
+            @extend .btn-primary;
+            min-height: unset;
+          }
+        }
+      }
+    }
+  }
+}

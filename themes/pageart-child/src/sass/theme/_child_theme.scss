@@ -1,0 +1,30 @@
+@import "general/default";
+
+@import "layout/grid";
+@import "layout/container";
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/home";
+@import "pages/contact";
+
+@import "templates/archive";
+@import "templates/single";
+@import "templates/search";
+@import "templates/404";
+
+//@import "wordpress/blocks/";
+@import "wordpress/modules/modified-gallery";
+
+@import "woocommerce/base";
+@import "woocommerce/notices";
+@import "woocommerce/widgets";
+@import "woocommerce/archive";
+@import "woocommerce/single";
+@import "woocommerce/mini-cart";
+@import "woocommerce/cart";
+@import "woocommerce/checkout";
+@import "woocommerce/account";
+
+@import "vendors/slick";
+@import "vendors/slick-theme";

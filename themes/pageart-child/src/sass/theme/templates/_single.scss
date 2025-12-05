@@ -1,0 +1,75 @@
+.entry-image {
+  padding: 16px 0;
+}
+
+div#comments {
+  margin-top: 48px;
+
+  h2.comments-title {
+    margin-bottom: 16px;
+  }
+
+  ol.comment-list {
+    padding: 0;
+    list-style: none;
+
+    & > li.comment {
+      padding: 24px 0;
+
+      .comment-meta {
+        .comment-author {
+          margin-bottom: 16px;
+        }
+
+        a {
+          color: $black;
+          text-decoration: unset;
+        }
+      }
+
+      .comment-metadata {
+        a {
+          font-size: 12px;
+        }
+      }
+
+      .comment-content {
+        margin-top: 8px;
+
+        p {
+          color: #000000;
+          font-size: 16px;
+        }
+      }
+
+    }
+  }
+
+  div#respond {
+    form {
+      & > p {
+        color: #000;
+        font-size: 16px;
+      }
+
+      label {
+        color: #343A40;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      textarea, input {
+        border: 1px solid #6C757D;
+      }
+
+      textarea {
+        border-radius: 20px;
+      }
+
+      input {
+        border-radius: 50px;
+      }
+    }
+  }
+}
