@@ -27,8 +27,7 @@ $use_cart_offcanvas = ( 'bootstrap5' === $bootstrap_version );
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
-		<!-- Your site branding in the menu -->
-		<?php get_template_part( 'global-templates/navbar-branding' ); ?>
+
 
 		<button
 			class="navbar-toggler"
@@ -41,6 +40,9 @@ $use_cart_offcanvas = ( 'bootstrap5' === $bootstrap_version );
 		>
 			<span class="navbar-toggler-icon"></span>
 		</button>
+
+        <!-- Your site branding in the menu -->
+		<?php get_template_part( 'global-templates/navbar-branding' ); ?>
 
 		<!-- The WordPress Menu goes here -->
 		<?php
@@ -58,7 +60,17 @@ $use_cart_offcanvas = ( 'bootstrap5' === $bootstrap_version );
 		);
 		?>
 
-        <div class="woocommerce-icons d-flex align-items-center gap-3">
+
+        <?php if ( is_active_sidebar( 'menu_right_section' ) ) : ?>
+    
+            <div class="menu-right-section-container d-flex align-items-center">
+                <?php dynamic_sidebar( 'menu_right_section' ); ?>
+            </div>
+
+        <?php endif; ?>
+
+
+        <div class="woocommerce-icons  d-flex align-items-center gap-3">
 
             <div class="header-searchbar">
                 <div class="dropdown">

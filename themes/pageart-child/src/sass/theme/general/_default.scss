@@ -49,3 +49,10 @@ h6 {
   line-height: $display-line-height;
   color: $headings-color;
 }
+
+
+@media (min-width: 1920px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xs2, .container-xxl, .container-xxs {
+        max-width: 1480px !important; 
+    }
+}

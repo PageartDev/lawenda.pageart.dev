@@ -20229,6 +20229,11 @@ h6, .h6, .wp-block-woocommerce-empty-cart-block .wc-block-cart__empty-cart__titl
   color: #343A40;
 }
 
+@media (min-width: 1920px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xs2, .container-xxl, .container-xxs {
+    max-width: 1480px !important;
+  }
+}
 header#wrapper-navbar {
   height: 60px;
 }
@@ -20254,10 +20259,6 @@ header#wrapper-navbar .navbar-toggler span {
 #wrapper-footer p > a {
   margin-left: 10px;
 }
-body {
-  background-color: aqua !important;
-}
-
 .entry-image {
   padding: 16px 0;
 }
