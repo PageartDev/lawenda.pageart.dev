@@ -55,31 +55,64 @@ $faq_items    = get_field('faq_section_tab');      // Type: Repeater
                             $btn_collapsed = $is_first ? '' : 'collapsed';
                             $aria_expanded = $is_first ? 'true' : 'false';
 
-                            // FIXED: Extracting data using the correct ACF field names from your JSON
+                            // CSS Logic: Add 'show-collapse' class if this item is open by default
+                            $item_active_class = $is_first ? ' show-collapse' : '';
+
+                            // Data extraction: Using correct keys from JSON
                             $question_text = $item['faq_section_tab_question'] ?? ''; 
                             $answer_text   = $item['faq_section_tab_answer'] ?? '';
                         ?>
-                            <div class="accordion-item">
+                            <div class="accordion-item<?php echo $item_active_class; ?>">
+                                
                                 <h2 class="accordion-header" id="<?php echo $id_head; ?>">
                                     <button class="accordion-button <?php echo $btn_collapsed; ?>" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $id_collapse; ?>" aria-expanded="<?php echo $aria_expanded; ?>" aria-controls="<?php echo $id_collapse; ?>">
                                         <?php echo esc_html( $question_text ); ?>
                                     </button>
                                 </h2>
+
                                 <div id="<?php echo $id_collapse; ?>" class="accordion-collapse collapse <?php echo $show_class; ?>" aria-labelledby="<?php echo $id_head; ?>" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
                                         <?php 
-                                            // Using wp_kses_post to allow safe HTML in the answer (since it's a WYSIWYG field)
+                                            // Using wp_kses_post to allow safe HTML in the answer
                                             echo wp_kses_post( $answer_text ); 
                                         ?>
                                     </div>
                                 </div>
+
                             </div>
                         <?php endforeach; ?>
 
                     </div>
 
                 <?php endif; ?>
+
+
+                <a href="<?php echo esc_url( $btn_url ); ?>" class="btn btn-outline-primary" target="<?php echo esc_attr( $btn_target ); ?>">
+                    <?php echo esc_html( $btn_title ); ?>
+                </a>
             </div>
         </div>
     </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Select the accordion container
+        var myAccordion = document.getElementById('faqAccordion');
+        
+        if(myAccordion) {
+            // Event listener: When an accordion item starts to OPEN
+            myAccordion.addEventListener('show.bs.collapse', function (e) {
+                // Find the parent .accordion-item and ADD the class
+                e.target.closest('.accordion-item').classList.add('show-collapse');
+            });
+
+            // Event listener: When an accordion item starts to CLOSE
+            myAccordion.addEventListener('hide.bs.collapse', function (e) {
+                // Find the parent .accordion-item and REMOVE the class
+                e.target.closest('.accordion-item').classList.remove('show-collapse');
+            });
+        }
+    });
+    </script>
+
 </section>

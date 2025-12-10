@@ -4,14 +4,101 @@ header#wrapper-navbar {
   .navbar-toggler {
     border: 0;
     padding: 0;
-    box-shadow: none !important;
+    box-shadow: none !important; 
+    @media (max-width: 959px) {
+      order: 1;      
+    }
 
     span {
       width: 25px;
-      height: 25px;
+      height: 19px;
+      background-image: url(/wp-content/uploads/2025/12/Frame-1547764891.svg); 
     }
   }
+  a.navbar-brand.custom-logo-link {
+    @media (max-width: 959px) {
+      order: 2;
+      img {
+        max-width: 139px;
+      }
+    }
+  }
+  nav#main-nav {
+    border-bottom-width: 0px !important;
+    padding: 0 !important;
+  }
+  #navbarNavDropdown {
+    @media (max-width: 959px) {
+      order: 4;
+    }
 
+    ul#main-menu { 
+      margin-right: auto; 
+
+      li { 
+        font-family: $Inter;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #65566C;
+        a {
+          color: #65566C;
+        }        
+      }
+      > li > a {
+        @media (min-width: 1600px) {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
+    }
+  }
+  .menu-right-section-container {
+    @media (max-width: 959px) {
+      order: 3;
+    }
+    gap: 37px;
+    ul {
+      padding-left: 0;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+      @media (max-width: 959px) {
+        display: none !important; 
+      }
+    }
+    p {
+      margin-bottom: 0;
+      a {
+        font-family: $Inter;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 16px;
+        line-height: 150%;
+        border-radius: 4px;
+        padding: 12px 24px;
+        text-decoration: none;
+        color: #885B9E;
+        border: 1px solid #885B9E;
+        backdrop-filter: blur(64px);
+        transition: all 0.3s ease-in-out;
+        @media (max-width: 959px) {
+          font-size: 12px;
+          padding: 8px 14px;
+        }
+        &:hover {
+                background-color: #885B9E;
+                color: #fff;
+        }
+      }
+    }
+  }
+  .woocommerce-icons {
+    display: none !important;
+  }
   .header-searchbar {
     .dropdown {
       .dropdown-menu {
@@ -28,3 +115,9 @@ header#wrapper-navbar {
     }
   }
 }
+
+
+
+
+
+

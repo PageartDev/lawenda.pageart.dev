@@ -42,7 +42,7 @@ $container = get_theme_mod('understrap_container_type');
 
             </div>
             <div class="col-md-6">
-                <p class="text-md-end">
+                <p>
                     <?php
                     echo sprintf(
                     /* translators: 1: Theme name, 2: Theme author */

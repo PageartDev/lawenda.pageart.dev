@@ -40,3 +40,45 @@ jQuery(document).ready(function ($) {
         $('button.wc-block-product-filters__open-overlay').trigger('click');
     })
 });
+
+
+
+
+/**
+ * Scroll Animation Script using Intersection Observer API
+ * Triggers animations when sections enter the viewport.
+ */
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // 1. Select all <section> tags on the page
+    const sections = document.querySelectorAll('section');
+
+    // 2. Configuration options for the observer
+    const options = {
+        root: null, // Use the viewport as the root
+        threshold: 0.15, // Trigger animation when 15% of the section is visible
+        rootMargin: "0px" // No extra margins
+    };
+
+    // 3. Create the IntersectionObserver instance
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            
+            // Check if the element is currently visible in the viewport
+            if (entry.isIntersecting) {
+                
+                // Add the class that triggers the CSS transition
+                entry.target.classList.add('is-visible');
+                
+                // Performance: Stop observing this element after it has appeared once
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    // 4. Start observing each section
+    sections.forEach(section => {
+        // Optional: Skip the first section if handled by CSS (see SCSS comment)
+        observer.observe(section);
+    });
+});

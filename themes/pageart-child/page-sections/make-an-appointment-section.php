@@ -1,12 +1,12 @@
 <?php
 /**
  * Retrieve ACF fields
+ * Note: 'make_an_appointment' content field is removed, using standard WP content instead.
  */
-$appt_bg_image = get_field('make_an_appointment_background_image'); // Type: Image (Array)
-$appt_subtitle = get_field('make_an_appointment_subtitle');         // Type: Text
-$appt_title    = get_field('make_an_appointment_title');            // Type: Text
-$appt_content  = get_field('make_an_appointment_content');          // Type: WYSIWYG Editor
-$appt_btn      = get_field('make_an_appointment_button');           // Type: Link
+$appt_bg_image = get_field('make_an_appointment_background_image'); 
+$appt_subtitle = get_field('make_an_appointment_subtitle');         
+$appt_title    = get_field('make_an_appointment_title');            
+$appt_btn      = get_field('make_an_appointment_button');           
 ?>
 
 <section class="appointment_section" style="background-image: url('<?php echo $appt_bg_image ? esc_url($appt_bg_image['url']) : ''; ?>');">
@@ -27,7 +27,10 @@ $appt_btn      = get_field('make_an_appointment_button');           // Type: Lin
                 <?php endif; ?>
 
                 <div class="text-content">
-                    <?php echo $appt_content; ?>
+                    <?php 
+                        // Выводит стандартный контент поста (из главного редактора)
+                        the_content(); 
+                    ?>
                 </div>
 
                 <?php if( $appt_btn ): 

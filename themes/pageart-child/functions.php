@@ -159,3 +159,25 @@ function inject_sections_before_footer() {
 
 // 3. Hook into 'get_footer'
 add_action( 'get_footer', 'inject_sections_before_footer', 5 );
+
+
+
+
+
+
+
+
+/**
+ * Add custom CSS to WordPress Admin Area
+ * Use 'admin_head' hook to inject styles into the <head> of admin pages.
+ */
+function my_custom_admin_styles() {
+    echo '<style>
+        /* Force ACF Select2 multiple choices to be full width */
+        .select2-container.-acf .select2-selection--multiple .select2-selection__choice {
+            width: calc(100% - 18px) !important;
+            margin-right: 18px !important; /* Optional: adds spacing if needed */
+        }
+    </style>';
+}
+add_action('admin_head', 'my_custom_admin_styles');

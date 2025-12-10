@@ -1,1 +1,699 @@
-  
+#page-wrapper {
+	padding: 11px 0 0 0;
+	@media (max-width: 767px) {
+		padding: 0;
+	}
+	#primary {
+		article {
+			header.entry-header, footer.entry-footer {
+				display: none;
+			}
+		}
+	}
+}
+
+
+section {
+
+	// Hero image row
+	&.hero-image-row {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+		background-size: cover;
+		padding-top: 239px;
+		padding-bottom: 177px;
+		@media (max-width: 959px) {
+			padding-top: 80px;
+			padding-bottom: 115px;
+		}
+		.subtitle {
+			margin-bottom: 18px;
+			@media (max-width: 768px) {
+				font-size: 22px;
+			}
+		}
+		h1 {
+			margin-bottom: 35px;
+			display: block;
+			max-width: 664px;
+			@media (min-width: 1200px) {
+				font-size: 60px;
+			}
+			@media (max-width: 768px) {
+				font-size: 36px;
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+
+	// About us
+	&.about-us-section {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		@media (max-width: 959px) {
+			padding-top: 70px;
+			padding-bottom: 35px;
+		}
+		.container {
+			> .row {
+				align-items: center;
+				img {
+					aspect-ratio: 675 / 550;
+					object-fit: cover;
+					border-radius: 4px;
+					transition: all 0.3s ease-in-out;
+					&:hover {
+						box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+					}
+				}
+
+				.col-md-6:last-child {
+					padding-top: 35px;
+					padding-bottom: 35px;
+					@media (min-width: 1600px) {
+						padding-left: 60px;
+					}
+				}
+				.subtitle {
+					margin-bottom: 12px;
+				}
+				h2 {
+					margin-bottom: 12px;
+				}
+				.text-area {
+					margin-bottom: 12px;
+				}
+			}
+		}
+	}
+
+
+	// Services section
+	&.services-section {
+		padding-top: 10px;
+		padding-bottom: 100px;
+		@media (max-width: 959px) {
+			padding-top: 35px;
+			padding-bottom: 70px;
+		}
+		.title_col {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			gap: 28px;
+			margin-bottom: 20px;
+			@media (max-width: 768px) {
+				margin-bottom: 28px;
+			}
+		}
+		.services_items {
+
+		}
+	}
+
+
+	// Appointment section
+	&.appointment_section {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+		background-size: cover;
+		padding-top: 133px;
+		padding-bottom: 133px;
+		position: relative;
+		@media (max-width: 959px) {
+			padding-top: 48px;
+			padding-bottom: 104px;
+		}
+		@media (max-width: 768px) {
+			&::after {
+				content: "";
+				height: 100%;
+				width: 100%;
+				background: linear-gradient(0deg, rgba(127, 108, 169, 0) 62.21%, rgba(127, 108, 169, 0.6) 80.25%);
+				position: absolute;
+				top: 0;
+				z-index: -1;
+			}
+		}
+
+		.subtitle {
+			color: #DDB8DE;
+			margin-bottom: 12px;
+		}
+		h3.title {
+			color: #FFFFFF;
+			margin-bottom: 12px;
+		}
+		.text-content {
+			margin-bottom: 30px;
+			max-width: 587px;
+			p {
+				color: #FFFFFF;
+				font-weight: 400;
+			}
+
+		}
+		a.btn.btn-outline-primary {
+			border-color: #fff;
+			color: #fff;
+			&:hover {
+				background-color: #fff;
+				color: #885B9E;
+			}
+		}
+	}
+
+
+	&.why-lavender-section {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		@media (max-width: 959px) {
+			padding-top: 70px;
+			padding-bottom: 35px;
+		}
+		.container {
+			> .row {
+				align-items: center;
+				img {
+					aspect-ratio: 622 / 731;
+					object-fit: cover;
+					border-radius: 4px;
+					transition: all 0.3s ease-in-out;
+					&:hover {
+						box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+					}
+				}
+				.col-md-7 {
+					padding-top: 35px;
+					padding-bottom: 35px;
+					@media (min-width: 1600px) {
+						padding-left: 50px;
+					}
+				}
+				.subtitle {
+					margin-bottom: 12px;
+				}
+				h3 {
+					margin-bottom: 24px;
+				}
+				.text-area {
+					margin-bottom: 12px;
+					strong {
+						font-weight: 500;
+					}
+					ul {
+						margin-bottom: 0;
+						padding-left: 0;
+						li {
+							list-style: none;
+							display: flex;
+							flex-direction: row;
+							align-items: flex-start;
+							&::before {
+								content: url(/wp-content/uploads/2025/12/check.svg);
+								margin-right: 11px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	// Vaucher section
+	&.voucher_section {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		@media (max-width: 959px) {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+		.container {
+			> .row {
+				padding-top: 60px;
+				padding-bottom: 30px;
+				position: relative;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-items: center;
+				.img_col {
+					img {
+						aspect-ratio: 728 / 476;
+						object-fit: cover;
+						border-radius: 10px;
+					}
+				}
+				.content_col {
+					padding-top: 35px;
+					padding-bottom: 35px;
+					@media (min-width: 1200px) {
+						padding-left: 7%;
+					}
+					.subtitle {
+						color: #DDB8DE;
+						margin-bottom: 24px;
+					}
+					h3.title {
+						color: #fff;
+						margin-bottom: 31px;
+					}
+					.content {
+						margin-bottom: 63px;
+						p {
+							font-family: $Lora;
+							font-weight: 400;
+							font-size: 36px;
+							line-height: 100%;
+							text-transform: uppercase;
+							color: #FFFFFFE5;
+						}
+					}
+					a.btn.btn-outline-primary {
+						border: 1px solid #FFFFFF;
+						color: #FFFFFF;
+						&:hover {
+							background-color: #fff;
+							color: #885B9E;
+						}
+					}
+				}
+				&::before {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 85%;
+					height: 100%;
+					content: "";
+					background-color: #76609B;
+					z-index: -1;
+					border-radius: 10px;
+					@media (max-width: 959px) {
+						width: 100%;
+						height: 70%;
+						top: unset;
+						bottom: 0;
+					}
+				}				
+			}
+		}
+	}
+
+
+	// Form section
+	&.form_section {
+		background-color: #E9E8F433;
+		padding-top: 76px;
+		padding-bottom: 76px;
+		@media (max-width: 959px) {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+		.container {
+			> .row {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-items: center;
+				.title_col {
+					h3.title {
+						display: block;
+						max-width: 337px;
+						font-weight: 400;
+						margin-bottom: 31px;
+					}
+					.subtitle {
+
+					}
+				}
+				.form_col {
+					.wpcf7 {
+						input, textarea {
+							background-color: transparent;
+							border-radius: 0;
+							border-width: 0;
+							border-bottom: 0.5px solid #65566C;
+							padding: 20px 0 20px 0;
+							box-shadow: none;
+							&::placeholder {
+								font-family: Inter;
+								font-weight: 300;
+								font-size: 16px;
+								line-height: 150%;
+								color:#65566C;
+								@media (max-width: 959px) { 
+									font-size: 12px;
+								}
+							}
+						}
+						textarea {
+							height: 114px;
+						}
+						.wpcf7-acceptance {
+							.wpcf7-list-item {
+								margin-left: 0;
+								/* --- Custom Checkbox Styles --- */
+								label {
+									display: flex;        // Align checkbox and text nicely
+									align-items: flex-start; // Align to top if text is long
+									cursor: pointer;      // Hand cursor on hover
+									position: relative;
+									
+									/* 1. Hide the native browser checkbox */
+									input[type="checkbox"] {
+										position: absolute;
+										opacity: 0;
+										cursor: pointer;
+										height: 0;
+										width: 0;
+
+										/* 2. Style the Custom Box (using ::before on the span) */
+										& + .wpcf7-list-item-label {
+											font-family: $Inter;
+											font-weight: 300;
+											font-size: 12px;
+											line-height: 150%;
+											color: #65566C;
+											position: relative;
+											padding-left: 25px; // Space for the custom box + gap
+											user-select: none;  // Prevent text selection when clicking rapidly
+
+											/* The Box */
+											&::before {
+											content: "";
+											position: absolute;
+											left: 0;
+											top: 2px; // Fine-tune vertical alignment with text
+											
+											// --- Your requested styles ---
+											width: 13px;
+											height: 13px;
+											border: 0.5px solid #65566C;
+											background-color: transparent;
+											// -----------------------------
+											
+											transition: all 0.2s ease; // Smooth transition
+											}
+
+											/* The Checkmark (The tick icon) */
+											&::after {
+											content: "";
+											position: absolute;
+											display: none; // Hidden by default
+											
+											// Checkmark styles (CSS shape)
+											left: 4px;
+											top: 4px;
+											width: 5px;
+											height: 8px;
+											border: solid #65566C; // Color of the tick
+											border-width: 0 1.5px 1.5px 0; // Thickness of the tick
+											transform: rotate(45deg);
+											}
+										}
+
+										/* 3. State: When Checked */
+										&:checked + .wpcf7-list-item-label {
+											
+											// Show the checkmark
+											&::after {
+											display: block;
+											}
+
+											// Optional: Change border color when checked
+											// &::before {
+											//   border-color: #000; 
+											// }
+										}
+									}
+								}
+							}
+						}
+						.submit-section {
+							margin-top: 32px;
+							input.wpcf7-submit {
+								width: auto;
+								font-family: $Inter;
+								font-weight: 500;
+								font-size: 16px;
+								line-height: 150%;
+								border-radius: 4px;
+								padding: 12px 24px;
+								color: #885B9E;
+								border: 1px solid #885B9E;
+								backdrop-filter: blur(64px);
+								transition: all 0.3s ease-in-out;
+								@media (max-width: 959px) { 
+									font-size: 12px;
+									padding: 10px 20px;
+								}
+								&:hover {
+											background-color: #885B9E;
+											color: #fff;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	// Partners logo section
+	&.partners_logo_section {
+		padding-top: 121px;
+		padding-bottom: 160px;
+		@media (max-width: 959px) {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+		.container {
+			> .row {
+				.col {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					.subtitle {
+						margin-bottom: 23px;
+					}
+					h3.title {
+						font-family: $Lora;
+						font-weight: 500;
+						font-size: 36px;
+						line-height: 100%;
+						text-align: center;
+						max-width: 839px;
+						margin: 0 auto 60px auto;
+						@media (max-width: 768px) {
+							font-size: 20px;
+						}
+
+					}
+					.logo_carousel_wrapper {
+						margin-top: 0;
+						margin-bottom: 50px;
+					}
+					.second_subtitle {
+						margin-top: 0;
+						font-family: $Inter;
+						font-weight: 300;
+						font-size: 16px;
+						line-height: 150%;
+						text-align: center;
+						@media (max-width: 768px) {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	// FAQ SECTION
+	&.faq_section {
+		background-color: #E9E8F433;
+		padding-top: 76px;
+		padding-bottom: 76px;
+		@media (max-width: 959px) {
+			padding-top: 35px;
+			padding-bottom: 70px;
+		}
+		.container {
+			> .row {
+				align-items: center;
+				.col-md-5  {
+					padding-top: 35px;
+					padding-bottom: 35px;
+					@media (max-width: 959px) {
+						padding-bottom: 0px;
+						display: flex;
+    					justify-content: space-between;
+						a.btn.btn-outline-primary {
+							display: none;
+						}
+						.subtitle {
+							max-width: 43%;
+							margin-bottom: 0px !important;
+							text-align: right;    
+						}
+					}
+				}
+				.col-md-7 {
+						a.btn.btn-outline-primary {
+							margin-top: 10px;
+							@media (min-width: 900px) {
+								display: none;
+							}							
+						}
+				}
+				h3.title {
+					margin-bottom: 20px;
+				}
+				.subtitle {
+					margin-bottom: 60px !important;
+				}
+				.accordion {
+					.accordion-item {
+						margin-bottom: 14px;
+						border: 1px solid #885B9E4D;
+						border-radius: 10px;
+						transition: all 0.4s ease-in-out;
+						&:hover {
+							box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+						}
+						&.show-collapse {
+							border: 1px solid #fff;
+						}
+						h2.accordion-header {
+							button.accordion-button  {
+								font-family: $Inter;
+								font-weight: 500;
+								font-size: 16px;
+								line-height: 150%;
+								background-color: transparent;
+								border-width: 0 !important;
+								color: #65566C;
+								box-shadow: none;
+								&::after {
+									width: 24px;
+									height: 24px;
+									background-size: contain;
+									background-image: url(/wp-content/uploads/2025/12/arrow_drop_down-6.svg);
+								}
+								&:not(.collapsed)::after {
+									background-image: url(/wp-content/uploads/2025/12/arrow_drop_down-6.svg);
+								}
+							}
+						}
+						.accordion-collapse {
+							.accordion-body {
+								padding-top: 0;
+								padding-bottom: 20px;
+								p {
+									font-family: $Inter;
+									font-weight: 300;
+									font-size: 16px;
+									line-height: 150%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+}
+
+
+.services_items {
+	.row {
+		> div .service_item {
+			position: relative;
+			border-radius: 10px;
+			overflow: hidden;
+			margin-bottom: 1.5rem;
+			@media (max-width: 768px) {
+				margin-bottom: 15px;
+			}
+			
+			.image {
+				img {
+					width: 100%;
+					height: 100%;
+					aspect-ratio: 480 / 485;
+					object-fit: cover;
+				}
+			}
+			.float_content {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				padding: 10%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				background: #9379CC80;
+				backdrop-filter: blur(34px);
+				opacity: 0;
+				transition: all 0.4s ease-in-out; 
+				h4 {
+					margin-bottom: 48px;
+					text-align: center;
+					a {
+						text-decoration: none;
+						font-family: $Lora;
+						font-weight: 500;
+						font-size: 28px;
+						line-height: 100%;
+						color: #FFFFFF;						
+						text-align: center;
+						@media (max-width: 768px) {
+							font-size: 24px;
+						}
+					}
+				}
+				a.service_link {
+					font-family: $Inter;
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 150%;
+					text-align: center; 
+					color: #FFFFFF;
+					border: 1px solid #FFFFFF;
+					padding: 12px 44px;
+					transition: all 0.3s ease-in-out;
+					border-radius: 4px;
+					text-decoration: none;
+					@media (max-width: 768px) {
+						font-size: 12px;
+						padding: 8px 30px;
+					}
+					&:hover {
+						background-color: #FFFFFF;
+						color: #885B9E;
+					}
+				}
+			}
+			&:hover {
+				.float_content {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
