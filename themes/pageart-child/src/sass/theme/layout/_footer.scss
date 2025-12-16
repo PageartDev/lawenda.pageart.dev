@@ -84,10 +84,22 @@
     }
   }
   &#wrapper-footer {
-    background-color: #E9E8F433 !important;
-    padding-top: 22px;
-		padding-bottom: 19px;
-    .container {
+    padding: 0;
+    background-color: transparent !important;
+
+    .footer_bottom_section {
+      background-color: #E9E8F433 !important;
+      padding-top: 22px;
+      padding-bottom: 19px;
+      @media (max-width: 999px) {
+        padding-bottom: 180px;
+      }
+      @media (max-width: 600px) {
+        padding-bottom: 156px;
+      }
+    }
+    .container {      
+
       > .row {
         justify-content: center;
         .col-md-6 {
@@ -116,7 +128,304 @@
       }
     }
     .float-element-container {
-      display: none;
+       background-color: #9379CC80; 
+       backdrop-filter: blur(34px);
+      position: fixed;
+      bottom: 15px;
+      right: 7%;
+      padding: 17px 46px 20px 46px;
+      border-radius: 10px;
+      @media (max-width: 999px) {
+        bottom: 15px;
+        right: 15px;
+        border-radius: 10px;
+        width: calc(100% - 30px);
+      }
+      @media (max-width: 600px) {
+        padding: 17px 16px;
+      }
+      .float-widget-item {
+        h5.d-none {  
+          display: block !important;
+          font-family: $Inter;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 28px; 
+          color:#FFFFFF;
+          margin-bottom: 15px;
+        }
+        .textwidget {
+          ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 0 !important;
+            padding-left: 0 !important;
+            list-style: none !important;
+            @media (max-width: 999px) {
+              justify-content: space-around;
+            }
+            li {
+              list-style: none !important;
+              display: block;
+              height: auto;  
+              a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 64px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 100%;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                padding: 0 30px;                
+                border: 1px solid #FFFFFF;
+                border-radius: 4px;
+                text-decoration: none;
+                transition: all 0.4s ease-in-out;
+                @media (max-width: 600px) {
+                  height: 49px;
+                }
+                &:hover {
+                  backdrop-filter: blur(64px);
+                }
+              }
+            }
+          } 
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// Popup
+
+.pum {
+  backdrop-filter: blur(194px);
+  .popmake {
+    @media (min-width: 1200px) {
+      padding: 54px 96px 14px 96px !important;
+    }
+    @media (max-width: 768px) {
+      padding-top: 76px !important;
+    }
+    .pum-content {
+      h3 {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 100%;
+        margin-bottom: 18px;
+        @media (max-width: 768px) {
+          font-size: 27px;
+        }
+      }
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #65566C;
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+        a {
+          font-weight: 700;
+          color:#885B9E;
+        }
+        &.subtitle {
+          font-weight: 400;
+          font-size: 31px;
+          line-height: 100%;
+          color:#885B9E;
+          margin-bottom: 45px;
+          @media (max-width: 768px) {
+            margin-bottom: 20px;
+            font-size: 21px;
+          }
+        }
+      }
+      .item_section {
+        &:not(.acceptance_section) {
+          input {
+            background-color: transparent;
+            border-radius: 0;
+            border-width: 0;
+            border-bottom: 0.5px solid #65566C;
+            padding: 20px 0;
+            box-shadow: none;
+            @media (max-width: 768px) {
+              padding: 10px 0;
+            }
+            &::placeholder {
+              font-family: Inter; 
+              font-weight: 300;
+              font-size: 16px;
+              line-height: 150%;
+              color:#65566C;
+              @media (max-width: 959px) { 
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        &.date {
+          position: relative;
+          &::after {
+            position: absolute;
+            top: 22px;
+            right: 9px;
+            content: url(/wp-content/uploads/2025/12/calendar_month.svg);
+            background: #faf9fc;
+            @media (max-width: 768px) {
+              top: 12px;
+            }
+          }
+        }
+        &.time {
+          position: relative;
+          &::after {
+            position: absolute;
+            top: 22px;
+            right: 9px;
+            content: url(/wp-content/uploads/2025/12/alarm.svg);
+            @media (max-width: 768px) {
+              top: 12px;
+            }
+          }
+        }
+      }
+
+      .wpcf7-acceptance {
+        margin-top: 11px;
+        display: block;
+        .wpcf7-list-item {
+          margin-left: 0;
+          /* --- Custom Checkbox Styles --- */
+          label {
+            display: flex;        // Align checkbox and text nicely
+            align-items: flex-start; // Align to top if text is long
+            cursor: pointer;      // Hand cursor on hover
+            position: relative;
+            
+            /* 1. Hide the native browser checkbox */
+            input[type="checkbox"] {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+
+              /* 2. Style the Custom Box (using ::before on the span) */
+              & + .wpcf7-list-item-label {
+                font-family: $Inter;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 150%;
+                color: #65566C;
+                position: relative;
+                padding-left: 25px; // Space for the custom box + gap
+                user-select: none;  // Prevent text selection when clicking rapidly
+
+                /* The Box */
+                &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 2px; // Fine-tune vertical alignment with text
+                
+                // --- Your requested styles ---
+                width: 13px;
+                height: 13px;
+                border: 0.5px solid #65566C;
+                background-color: transparent;
+                // -----------------------------
+                
+                transition: all 0.2s ease; // Smooth transition
+                }
+
+                /* The Checkmark (The tick icon) */
+                &::after {
+                content: "";
+                position: absolute;
+                display: none; // Hidden by default
+                
+                // Checkmark styles (CSS shape)
+                left: 4px;
+                top: 4px;
+                width: 5px;
+                height: 8px;
+                border: solid #65566C; // Color of the tick
+                border-width: 0 1.5px 1.5px 0; // Thickness of the tick
+                transform: rotate(45deg);
+                }
+              }
+
+              /* 3. State: When Checked */
+              &:checked + .wpcf7-list-item-label {
+                
+                // Show the checkmark
+                &::after {
+                display: block;
+                }
+
+                // Optional: Change border color when checked
+                // &::before {
+                //   border-color: #000; 
+                // }
+              }
+            }
+          }
+        }
+      }
+      .submit-section {
+        margin-top: 32px;
+        input.wpcf7-submit {
+          width: auto;
+          font-family: $Inter;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 150%;
+          border-radius: 4px;
+          padding: 12px 24px;
+          color: #885B9E;
+          border: 1px solid #885B9E;
+          backdrop-filter: blur(64px);
+          transition: all 0.3s ease-in-out;
+          margin: 0 auto;
+          display: block;
+          background-color: transparent;
+          @media (max-width: 959px) { 
+            font-size: 12px;
+            padding: 10px 20px;
+          }
+          &:hover {
+                background-color: #885B9E;
+                color: #fff;
+          }
+        }
+      }
+
+    }
+    button.pum-close.popmake-close {
+      background-color: transparent;
+      border: 1px solid #885B9E;
+      color: #885B9E;
+      font-weight: 100;
+      font-size: 24px;
+      line-height: 24px;
+      padding: 0;
+      border-radius: 4px;
+      height: 29px;
+      width: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
     }
   }
 }
